@@ -13,10 +13,10 @@ module.exports = class teacherController{
     static async postTeacher(req,res){
         const {numero2} = req.body;
         if(numero2 % 2 === 0){
-            res.status(400).json({message:'Numero e par'});
+            res.status(200).json({message:'Numero e par'});
         }
         else{
-            res.status(200).json({message: "Numero nao e par"});
+            res.status(400).json({message: "Numero nao e par"});
         }
 
     }
